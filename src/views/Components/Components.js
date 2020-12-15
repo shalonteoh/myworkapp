@@ -43,8 +43,7 @@ export default function Components(props) {
     } else {
       setTimeout(function () {
         setToolTipX(x)
-      }
-        .bind(this),
+      },
         500);
     }
   };
@@ -60,8 +59,7 @@ export default function Components(props) {
     } else {
       setTimeout(function () {
         setToolTipX(x)
-      }
-        .bind(this),
+      },
         500);
     }
   }
