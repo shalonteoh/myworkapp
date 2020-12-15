@@ -16,7 +16,7 @@ export default function Section5() {
                 <div className={classes.paper}>
                     <Grid container spacing={5}>
                         <Grid item container className={classes.center}>
-                            <img className={classes.image} src={require("assets/img/contact.png")} />
+                            <img className={classes.image} src={require("assets/img/contact.png")} alt="memoji3" />
                         </Grid>
                         <Grid item container className={classNames(classes.center, classes.title)}>
                             React out to me?
@@ -31,7 +31,7 @@ export default function Section5() {
                                 target="_blank"
                                 className={classes.socialIcons}
                             >
-                                <img className={classes.socialIcons} src={require("assets/img/linkedin.png")} />
+                                <img className={classes.socialIcons} src={require("assets/img/linkedin.png")} alt="linkedin" />
                             </Button>
                             <Button
                                 color="transparent"
@@ -39,7 +39,7 @@ export default function Section5() {
                                 target="_blank"
                                 className={classes.socialIcons}
                             >
-                                <img className={classes.socialIcons} src={require("assets/img/github.png")} />
+                                <img className={classes.socialIcons} src={require("assets/img/github.png")} alt="github" />
                             </Button>
                             <Button
                                 color="transparent"
@@ -47,7 +47,7 @@ export default function Section5() {
                                 target="_blank"
                                 className={classes.socialIcons}
                             >
-                                <img className={classes.socialIcons} src={require("assets/img/stack-overflow.png")} />
+                                <img className={classes.socialIcons} src={require("assets/img/stack-overflow.png")} alt="stack-overflow" />
                             </Button>
                         </Grid>
                     </Grid>

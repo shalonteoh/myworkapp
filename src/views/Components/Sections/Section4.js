@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/section4Style.js";
-import { Box, Tab, Tabs, Typography } from "@material-ui/core";
+import { Box, Tab, Tabs } from "@material-ui/core";
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(styles);
@@ -19,7 +19,7 @@ function TabPanel(props) {
         >
             {value === index && (
                 <Box p={3}>
-                    <Typography>{children}</Typography>
+                    {children}
                 </Box>
             )}
         </div>
@@ -110,20 +110,20 @@ export default function Section4() {
                         value={value}
                         onChange={handleChange}
                         classes={{
-                            indicator: classes.indicator
+                            indicator: classes.indicator,
                         }}
                     >
                         <Tab label="Skills" {...a11yProps(0)} classes={{
                             root: classes.tab,
-                            selected: {}
+                            selected: classes.selected
                         }} />
                         <Tab label="Experience" {...a11yProps(1)} classes={{
                             root: classes.tab,
-                            selected: {}
+                            selected: classes.selected
                         }} />
                         <Tab label="Education" {...a11yProps(2)} classes={{
                             root: classes.tab,
-                            selected: {}
+                            selected: classes.selected
                         }} />
                     </Tabs>
                 </div>

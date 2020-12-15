@@ -6,6 +6,7 @@ const section4Style = {
   },
   container: {
     ...container,
+    height: "80vh"
   },
   list: {
     display: "flex",
@@ -59,9 +60,9 @@ const section4Style = {
       borderTopRightRadius: "10px"
     }
   },
-  tabsContent: {
-    // maxWidth: 800,
-    // textAlign: "center"
+  selected: {
+    color: '#fff',
+    backgroundColor: "rgba(0,0,0,0.3)"
   },
   displayNone: {
     display: "none !important"

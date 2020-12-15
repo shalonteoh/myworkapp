@@ -52,7 +52,7 @@ export default function Footer(props) {
         </div>
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made with{" "}
-          <i class="fab fa-react"></i>{" "}by Shalon Teoh
+          <i className="fab fa-react"></i>{" "}by Shalon Teoh
         </div>
       </div>
     </footer>

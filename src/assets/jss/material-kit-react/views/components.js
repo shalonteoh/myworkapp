@@ -16,6 +16,21 @@ const componentsStyle = {
   socialIconsContainer: {
     marginTop: 30,
   },
+  customButton: {
+    display: "relative",
+    padding: 0,
+    margin: 0,
+    textTransform: "none",
+  },
+  tooltip: {
+    position: "absolute",
+    zIndex: 1,
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: "transparent",
+    overflow: "hidden",
+  },
   brand: {
     color: "#282C33",
     textAlign: "left",
@@ -55,6 +70,10 @@ const componentsStyle = {
     width: 32,
     height: 32,
   },
+  tooltipImage: {
+    width: 100,
+    height: "auto"
+  }
 };
 
 export default componentsStyle;

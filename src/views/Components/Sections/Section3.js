@@ -1,26 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/section3Style.js";
-import GridContainer from "components/Grid/GridContainer";
-import GridItem from "components/Grid/GridItem";
 import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
-export default function Section3() {
+export default function Section3(props) {
     const classes = useStyles();
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleWindowResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-        window.addEventListener('resize', handleWindowResize);
-        return () => {
-            window.removeEventListener('resize', handleWindowResize)
-        }
-    }, []);
 
     return (
         <div className={classes.sections}>
@@ -28,11 +15,11 @@ export default function Section3() {
                 <div
                     className={classNames(classes.subContainer, classes.blue)}
                     style={{
-                        flex: windowWidth > 800 ? 4 : 1,
+                        flex: props.windowWidth > 800 ? 4 : 1,
                         backgroundImage: `url(${require("assets/img/easywork.png")})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "bottom 0px right 0px",
-                        backgroundSize: windowWidth > 800 ? "auto 100%" : "0%"
+                        backgroundSize: props.windowWidth > 800 ? "auto 100%" : "0%"
                     }}
                 >
                     <div className={classes.brand}>
@@ -43,11 +30,11 @@ export default function Section3() {
                 <div
                     className={classNames(classes.subContainer, classes.red)}
                     style={{
-                        flex: windowWidth > 800 ? 3 : 1,
+                        flex: props.windowWidth > 800 ? 3 : 1,
                         backgroundImage: `url(${require("assets/img/exabytes.png")})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "bottom 0px right 0px",
-                        backgroundSize: windowWidth > 800 ? "cover" : "0%"
+                        backgroundSize: props.windowWidth > 800 ? "cover" : "0%"
                     }}
                 >
                     <div className={classes.brand}>
@@ -60,11 +47,11 @@ export default function Section3() {
                 <div
                     className={classNames(classes.subContainer, classes.grey)}
                     style={{
-                        flex: windowWidth > 800 ? 6 : 1,
+                        flex: props.windowWidth > 800 ? 6 : 1,
                         backgroundImage: `url(${require("assets/img/easyworkhub.png")})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "bottom -10px right 0px",
-                        backgroundSize: windowWidth > 800 ? "auto 80%" : "0%"
+                        backgroundSize: props.windowWidth > 800 ? "auto 80%" : "0%"
                     }}
                 >
                     <div className={classes.brand}>
@@ -75,7 +62,7 @@ export default function Section3() {
                 <div
                     className={classNames(classes.subContainer, classes.indigo)}
                     style={{
-                        flex: windowWidth > 800 ? 2 : 1
+                        flex: props.windowWidth > 800 ? 2 : 1
                     }}
                 >
                     <Link to="profile-page">
@@ -85,7 +72,7 @@ export default function Section3() {
                                 <h2 className={classes.title}>See All<br />Projects</h2>
                             </div>
                             <div className={classes.icons}>
-                                <i class="far fa-arrow-alt-circle-right" style={{ transform: "rotate(-45deg)" }}></i>
+                                <i className="far fa-arrow-alt-circle-right" style={{ transform: "rotate(-45deg)" }}></i>
                             </div>
                         </div>
                     </Link>
