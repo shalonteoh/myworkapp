@@ -19,12 +19,12 @@ export default function Section3(props) {
                         backgroundImage: `url(${require("assets/img/easywork.png")})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "bottom 0px right 0px",
-                        backgroundSize: props.windowWidth > 800 ? "auto 100%" : "0%"
+                        backgroundSize: props.windowWidth > 800 ? "auto 100%" : "auto 80%"
                     }}
                 >
                     <div className={classes.brand}>
-                        <h2 className={classes.subtitle}>Laravel Developer</h2>
-                        <h2 className={classes.title}>EasyWork<br />Mobile App</h2>
+                        <div className={classes.subtitle}>Laravel Developer</div>
+                        <div className={classNames(classes.title, classes.marginTop)}>EasyWork<br />Mobile App</div>
                     </div>
                 </div>
                 <div
@@ -34,12 +34,12 @@ export default function Section3(props) {
                         backgroundImage: `url(${require("assets/img/exabytes.png")})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "bottom 0px right 0px",
-                        backgroundSize: props.windowWidth > 800 ? "cover" : "0%"
+                        backgroundSize: "cover"
                     }}
                 >
                     <div className={classes.brand}>
-                        <h2 className={classes.subtitle}>Bootstrap Developer</h2>
-                        <h2 className={classes.title}>Exabytes App<br />Spin & Win</h2>
+                        <div className={classes.subtitle}>Bootstrap Developer</div>
+                        <div className={classNames(classes.title, classes.marginTop)}>Exabytes App<br />Spin & Win</div>
                     </div>
                 </div>
             </div>
@@ -48,15 +48,15 @@ export default function Section3(props) {
                     className={classNames(classes.subContainer, classes.grey)}
                     style={{
                         flex: props.windowWidth > 800 ? 6 : 1,
-                        backgroundImage: `url(${require("assets/img/easyworkhub.png")})`,
+                        backgroundImage: props.windowWidth > 800 ? `url(${require("assets/img/easyworkhub.png")})` : `url(${require("assets/img/easyworkHubVertical.png")})`,
                         backgroundRepeat: "no-repeat",
-                        backgroundPosition: "bottom -10px right 0px",
-                        backgroundSize: props.windowWidth > 800 ? "auto 80%" : "0%"
+                        backgroundPosition: props.windowWidth > 800 ? "bottom 0px right 0px" : "bottom -50px right 0px",
+                        backgroundSize: "auto 80%"
                     }}
                 >
                     <div className={classes.brand}>
-                        <h2 className={classes.subtitle}>ReactJS Developer</h2>
-                        <h2 className={classes.title}>EasyWork<br />Hub</h2>
+                        <div className={classes.subtitle}>ReactJS Developer</div>
+                        <div className={classNames(classes.title, classes.marginTop)}>EasyWork<br />Hub</div>
                     </div>
                 </div>
                 <div
@@ -68,11 +68,11 @@ export default function Section3(props) {
                     <Link to="profile-page">
                         <div className={classes.content}>
                             <div className={classes.brand}>
-                                <h2 className={classes.subtitle}>+5 more projects</h2>
-                                <h2 className={classes.title}>See All<br />Projects</h2>
+                                <div className={classes.subtitle}>+5 more projects</div>
+                                <div className={classNames(classes.title, classes.marginTop)}>See All<br />Projects</div>
                             </div>
                             <div className={classes.icons}>
-                                <i className="far fa-arrow-alt-circle-right" style={{ transform: "rotate(-45deg)" }}></i>
+                                <i className="far fa-arrow-alt-circle-right"></i>
                             </div>
                         </div>
                     </Link>

@@ -1,4 +1,4 @@
-import { container } from "assets/jss/material-kit-react.js";
+import { container, subtitleFont } from "assets/jss/material-kit-react.js";
 
 const section4Style = {
   sections: {
@@ -82,15 +82,17 @@ const section4Style = {
     padding: "10px 30px",
   },
   title: {
-    fontWeight: "600",
+    ...subtitleFont,
+    lineHeight: "1em",
+    fontWeight: "500",
   },
   titleTint: {
     color: "#4A90E2"
   },
   subtitle: {
-    fontSize: "24px",
+    ...subtitleFont,
     fontWeight: "300",
-    maxWidth: "500px",
+    lineHeight: "1em",
   },
   space50: {
     height: "50px",
@@ -123,6 +125,9 @@ const section4Style = {
   },
   grey: {
     background: "#4A4A4A"
+  },
+  marginTop: {
+    marginTop: 10
   }
 };
 

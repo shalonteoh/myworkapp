@@ -1,4 +1,4 @@
-import { container } from "assets/jss/material-kit-react.js";
+import { container, titleFont } from "assets/jss/material-kit-react.js";
 
 const section5Style = {
   sections: {
@@ -6,6 +6,17 @@ const section5Style = {
   },
   container: {
     ...container,
+  },
+  round: {
+    width: 250,
+    height: 250,
+    borderRadius: 125,
+    overflow: "hidden",
+    "@media (max-width: 800px)": {
+      width: 150,
+      height: 150,
+      borderRadius: 75,
+    },
   },
   paper: {
     padding: 20,
@@ -23,7 +34,7 @@ const section5Style = {
     padding: "10px 30px",
   },
   title: {
-    fontSize: 30,
+    ...titleFont,
     fontWeight: "400",
   },
   titleTint: {
@@ -35,8 +46,11 @@ const section5Style = {
     maxWidth: "500px",
   },
   image: {
-    width: 200,
-    height: "auto"
+    width: 250,
+    height: "auto",
+    "@media (max-width: 800px)": {
+      width: 150,
+    },
   },
   socialIcons: {
     width: 32,

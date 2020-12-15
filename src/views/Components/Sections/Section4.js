@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/section4Style.js";
 import { Box, Tab, Tabs } from "@material-ui/core";
 import PropTypes from 'prop-types';
+import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
@@ -133,7 +134,7 @@ export default function Section4() {
                             {SKILLS.map(({ title, desc }, index) => (
                                 <div key={index} className={classes.row}>
                                     <div className={classes.title}>{title}</div>
-                                    <div>{desc}</div>
+                                    <div className={classes.subtitle}>{desc}</div>
                                 </div>
                             ))}
                         </div>
@@ -143,7 +144,7 @@ export default function Section4() {
                             {EXP.map(({ title, desc }, index) => (
                                 <div key={index} className={classes.column}>
                                     <div className={classes.title}>{title}</div>
-                                    <div>{desc}</div>
+                                    <div className={classNames(classes.subtitle, classes.marginTop)}>{desc}</div>
                                 </div>
                             ))}
                         </div>
@@ -153,8 +154,8 @@ export default function Section4() {
                             {EDUCATIONS.map(({ title, location, desc }, index) => (
                                 <div key={index} className={classes.column}>
                                     <div className={classes.title}>{title}</div>
-                                    <div>{location}</div>
-                                    <div>{desc}</div>
+                                    <div className={classNames(classes.subtitle, classes.marginTop)}>{location}</div>
+                                    <div className={classNames(classes.subtitle, classes.marginTop)}>{desc}</div>
                                 </div>
                             ))}
                         </div>

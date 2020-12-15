@@ -1,4 +1,4 @@
-import { container } from "assets/jss/material-kit-react.js";
+import { container, titleFont, subtitleFont } from "assets/jss/material-kit-react.js";
 
 const section3Style = {
   sections: {
@@ -16,41 +16,26 @@ const section3Style = {
     overflow: "hidden",
     borderRadius: 20
   },
-  absolute: {
-    position: 'absolute',
-  },
   brand: {
     color: "#fff",
     textAlign: "left",
-    padding: "10px 30px",
+    padding: "20px 30px",
   },
   title: {
-    fontSize: "30px",
+    ...titleFont,
     fontWeight: "500",
   },
-  titleTint: {
-    color: "#4A90E2"
-  },
   subtitle: {
-    fontSize: "24px",
+    ...subtitleFont,
     fontWeight: "300",
-    maxWidth: "500px",
-  },
-  space50: {
-    height: "50px",
-    display: "block"
-  },
-  space70: {
-    height: "70px",
-    display: "block"
   },
   icons: {
+    ...titleFont,
     display: "flex",
     alignItems: "flex-end",
     justifyContent: "flex-end",
     color: "#fff",
-    fontSize: 50,
-    marginRight: 30,
+    padding: "20px 30px",
   },
   image: {
     width: "50%",
@@ -67,6 +52,9 @@ const section3Style = {
   },
   grey: {
     background: "#4A4A4A"
+  },
+  marginTop: {
+    marginTop: 10
   }
 };
 

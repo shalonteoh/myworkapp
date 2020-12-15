@@ -16,7 +16,9 @@ export default function Section5() {
                 <div className={classes.paper}>
                     <Grid container spacing={5}>
                         <Grid item container className={classes.center}>
-                            <img className={classes.image} src={require("assets/img/contact.png")} alt="memoji3" />
+                            <div className={classes.round}>
+                                <img className={classes.image} src={require("assets/img/shalon.jpg")} alt="shalon" />
+                            </div>
                         </Grid>
                         <Grid item container className={classNames(classes.center, classes.title)}>
                             React out to me?

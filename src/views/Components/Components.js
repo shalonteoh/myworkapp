@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -19,6 +19,7 @@ import Section3 from "./Sections/Section3.js";
 import Section4 from "./Sections/Section4.js";
 import Section5 from "./Sections/Section5.js";
 import ReactFullpage from '@fullpage/react-fullpage';
+import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
@@ -29,46 +30,6 @@ export default function Components(props) {
   const { ...rest } = props;
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [showToolTip, setToolTipShow] = useState(false);
-  const [toolTipX, setToolTipX] = useState(0);
-  const [toolTipY, setToolTipY] = useState(0);
-
-  const myToolTip = useRef(null);
-  const myButton = useRef(null);
-
-  const onMouseEnter = (e) => {
-    const x = e.clientX - myButton.current.getBoundingClientRect().left;
-    const y = e.clientY - myButton.current.getBoundingClientRect().top;
-
-    setToolTipShow(true);
-    if (myToolTip.current) {
-      setToolTipX(x);
-      setToolTipY(y);
-    } else {
-      setTimeout(function () {
-        setToolTipX(x);
-      },
-        500);
-    }
-  };
-
-  const onMouseLeave = (e) => {
-    setToolTipShow(false);
-  }
-
-  const onMouseMove = (e) => {
-    const x = e.clientX - myButton.current.getBoundingClientRect().left;
-    const y = e.clientY - myButton.current.getBoundingClientRect().top;
-    if (myToolTip.current) {
-      setToolTipX(x);
-      setToolTipY(y);
-    } else {
-      setTimeout(function () {
-        setToolTipX(x);
-      },
-        500);
-    }
-  }
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -93,74 +54,62 @@ export default function Components(props) {
               <div className="section">
                 <div>
                   <Header
-                    brand="👋 Shalon Teoh"
+                    brand={(
+                      <div><i class="far fa-envelope"></i>{" "}shalonteoh@gmail.com</div>
+                    )}
                     rightLinks={<HeaderLinks fullpageApi={fullpageApi} />}
                     absolute
                     color="transparent"
-                    changeColorOnScroll={{
-                      height: 400,
-                      color: "white"
-                    }}
                     {...rest}
                   />
-                  <Parallax className={classes.mainContainer}>
+                  <Parallax >
                     <div className={classes.container}>
-                      <GridContainer className={classes.subContainer}>
-                        <GridItem>
-                          <div className={classes.brand}>
-                            <Button
-                              ref={myButton}
-                              color="transparent"
-                              onMouseEnter={onMouseEnter}
-                              onMouseMove={onMouseMove}
-                              onMouseLeave={onMouseLeave}
-                              className={classes.customButton}
-                            >
-                              {
-                                showToolTip && (
-                                  <div
-                                    ref={myToolTip}
-                                    className={classes.tooltip}
-                                    style={{
-                                      top: toolTipY - 100,
-                                      left: toolTipX
-                                    }}
-                                  >
-                                    <img className={classes.tooltipImage} src={require("assets/img/shalon.jpg")} alt="shalon" />
-                                  </div>
-                                )
-                              }
-                              <h2 className={classes.title}>Shalon Teoh —</h2>
-                            </Button>
-                            <h2 className={classes.subtitle}>developer from<br />Penang Malaysia</h2>
-                          </div>
-                        </GridItem>
-                        <GridItem>
-                          <div className={classes.socialIconsContainer}>
-                            <Button
-                              color="transparent"
-                              href="https://www.linkedin.com/in/shalonteohsinyong"
-                              target="_blank"
-                              className={classes.socialIcons}
-                            >
-                              <img className={classes.socialIcons} src={require("assets/img/linkedin.png")} alt="linkedin" />
-                            </Button>
-                            <Button
-                              color="transparent"
-                              href="https://github.com/shalonteoh"
-                              target="_blank"
-                              className={classes.socialIcons}
-                            >
-                              <img className={classes.socialIcons} src={require("assets/img/github.png")} alt="github" />
-                            </Button>
-                          </div>
-                        </GridItem>
-                      </GridContainer>
-                      <GridContainer className={classes.subContainer}>
-                        <GridItem>
-                          <img className={classes.image} src={require("assets/img/bg2.png")} alt="bg2" />
-                        </GridItem>
-                      </GridContainer>
+                      <div className={classes.content}>
+                        <GridContainer>
+                          <GridItem>
+                            <img className={classes.image} src={require("assets/img/bg2.png")} alt="bg2" />
+                          </GridItem>
+                        </GridContainer>
+                        <GridContainer className={classes.marginTop}>
+                          <GridItem>
+                            <div className={classes.brand}>
+                              <div className={classes.subtitle}>Hi, I’m Shalon 🤘</div>
+                              <div className={classNames(classes.title, classes.marginTop)}>Build apps for mobile and web</div>
+                              <div className={classNames(classes.subtitle, classes.marginTop)}>a <b>Full Stack Developer</b> in Penang, Malaysia.
+I specialized in mobile back-end and responsive website development</div>
+                            </div>
+                          </GridItem>
+                          <GridItem className={classes.marginTop}>
+                            <div className={classes.socialIconsContainer}>
+                              <Button
+                                color="transparent"
+                                href="https://www.linkedin.com/in/shalonteohsinyong"
+                                target="_blank"
+                                className={classes.socialIcons}
+                              >
+                                <img className={classes.socialIcons} src={require("assets/img/linkedin.png")} alt="linkedin" />
+                              </Button>
+                              <Button
+                                color="transparent"
+                                href="https://github.com/shalonteoh"
+                                target="_blank"
+                                className={classes.socialIcons}
+                              >
+                                <img className={classes.socialIcons} src={require("assets/img/github.png")} alt="github" />
+                              </Button>
+                              <Button
+                                color="transparent"
+                                href="https://stackoverflow.com/users/7862335/shalonteoh"
+                                target="_blank"
+                                className={classes.socialIcons}
+                              >
+                                <img className={classes.socialIcons} src={require("assets/img/stack-overflow.png")} alt="stack-overflow" />
+                              </Button>
+                            </div>
+                          </GridItem>
+                        </GridContainer>
+                      </div>
+
                     </div>
                   </Parallax>
                 </div>
@@ -181,7 +130,7 @@ export default function Components(props) {
 
               <div className="section">
                 <Section5 />
-                <Footer fullpageApi={fullpageApi} />
+                <Footer fullpageApi={fullpageApi} windowWidth={windowWidth} />
               </div>
             </ReactFullpage.Wrapper>
           );

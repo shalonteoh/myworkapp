@@ -23,7 +23,7 @@ export default function HeaderLinks(props) {
         <Button
           color="transparent"
           className={classes.navLink}
-          onClick={() => props.fullpageApi.moveTo(3)}
+          onClick={() => props.fullpageApi.moveTo(2)}
         >
           All Projects
         </Button>
@@ -32,9 +32,18 @@ export default function HeaderLinks(props) {
         <Button
           color="transparent"
           className={classes.navLink}
+          onClick={() => props.fullpageApi.moveTo(3)}
+        >
+          Skills & Tools
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          color="transparent"
+          className={classes.navLink}
           onClick={() => props.fullpageApi.moveTo(4)}
         >
-          About Me
+          Background
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>

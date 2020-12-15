@@ -47,6 +47,48 @@ const container = {
   }
 };
 
+const titleFont = {
+  fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
+  lineHeight: "1em",
+  "@media (min-width: 576px)": {
+    fontSize: "30px"
+  },
+  "@media (min-width: 768px)": {
+    fontSize: "30px"
+  },
+  "@media (min-width: 992px)": {
+    fontSize: "42px"
+  },
+  "@media (min-width: 1200px)": {
+    fontSize: "42px"
+  }
+};
+
+const subtitleFont = {
+  fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
+  "@media (min-width: 576px)": {
+    fontSize: "16px"
+  },
+  "@media (min-width: 768px)": {
+    fontSize: "16px"
+  },
+  "@media (min-width: 992px)": {
+    fontSize: "18px"
+  },
+  "@media (min-width: 1200px)": {
+    fontSize: "18px"
+  }
+};
+
+const standardFont = {
+  fontSize: 50,
+  fontWeight: "500",
+  lineHeight: "1.5em",
+  "@media (max-width: 800px)": {
+    fontSize: 30,
+  },
+};
+
 const boxShadow = {
   boxShadow:
     "0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
@@ -179,6 +221,13 @@ const cardSubtitle = {
   marginTop: "-.375rem"
 };
 
+const columnCenter = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+};
+
 export {
   //variables
   drawerWidth,
@@ -213,5 +262,9 @@ export {
   title,
   cardTitle,
   cardLink,
-  cardSubtitle
+  cardSubtitle,
+  titleFont,
+  subtitleFont,
+  standardFont,
+  columnCenter
 };

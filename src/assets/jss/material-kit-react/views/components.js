@@ -1,20 +1,26 @@
-import { container } from "assets/jss/material-kit-react.js";
+import { container, columnCenter } from "assets/jss/material-kit-react.js";
 
 const componentsStyle = {
-  mainContainer: {
-    background: "#FFF"
-  },
   container: {
     ...container,
     display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
+    justifyContent: "center",
+  },
+  content: {
+    ...columnCenter,
+    width: "80vh",
+    "@media (max-width: 800px)": {
+      width: "100%",
+    },
   },
   subContainer: {
     flex: 1,
   },
   socialIconsContainer: {
     marginTop: 30,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   customButton: {
     display: "relative",
@@ -32,21 +38,22 @@ const componentsStyle = {
     overflow: "hidden",
   },
   brand: {
-    color: "#282C33",
-    textAlign: "left",
+    color: "#fff",
+    textAlign: "center",
+    fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
   },
   title: {
-    fontSize: "50px",
-    fontWeight: "500",
-    color: "#4A90E2"
+    lineHeight: "1.5cm",
+    fontSize: 42,
+    fontWeight: "500"
   },
   subtitle: {
-    fontSize: "50px",
-    fontWeight: "500",
-    maxWidth: "500px",
+    fontSize: 20,
+    fontWeight: "400",
+    lineHeight: "1cm",
   },
   main: {
-    background: "#FFFFFF",
+    background: "#000",
     position: "relative",
     // zIndex: "3"
   },
@@ -63,8 +70,8 @@ const componentsStyle = {
     textAlign: "center"
   },
   image: {
-    width: 500,
-    height: "auto"
+    width: 100,
+    height: 100,
   },
   socialIcons: {
     width: 32,
@@ -73,6 +80,9 @@ const componentsStyle = {
   tooltipImage: {
     width: 100,
     height: "auto"
+  },
+  marginTop: {
+    marginTop: 20
   }
 };
 

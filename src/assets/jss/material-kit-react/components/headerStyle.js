@@ -19,9 +19,9 @@ const headerStyle = {
     borderRadius: "3px",
     padding: "0.625rem 0",
     marginBottom: "20px",
-    color: "#555",
+    color: "#fff",
     width: "100%",
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
     boxShadow:
       "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
     transition: "all 150ms ease 0s",
@@ -53,16 +53,16 @@ const headerStyle = {
   },
   title: {
     ...defaultFont,
+    fontWeight: "400",
     lineHeight: "30px",
     fontSize: "18px",
     borderRadius: "3px",
     textTransform: "none",
-    color: "#282C33",
+    color: "#fff",
     padding: "8px 16px",
     letterSpacing: "unset",
     "&:hover,&:focus": {
-      color: "#282C33",
-      background: "rgba(200, 200, 200, 0.2)"
+      color: "#fff",
     }
   },
   appResponsive: {
@@ -145,7 +145,8 @@ const headerStyle = {
     textAlign: "left",
     paddingRight: "0px",
     paddingLeft: "0",
-    ...transition
+    ...transition,
+    backgroundColor: "#000"
   }
 };
 
