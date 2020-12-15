@@ -31,18 +31,22 @@ export default function Components(props) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [showToolTip, setToolTipShow] = useState(false);
   const [toolTipX, setToolTipX] = useState(0);
+  const [toolTipY, setToolTipY] = useState(0);
 
   const myToolTip = useRef(null);
   const myButton = useRef(null);
 
   const onMouseEnter = (e) => {
     const x = e.clientX - myButton.current.getBoundingClientRect().left;
+    const y = e.clientY - myButton.current.getBoundingClientRect().top;
+
     setToolTipShow(true);
     if (myToolTip.current) {
-      setToolTipX(x)
+      setToolTipX(x);
+      setToolTipY(y);
     } else {
       setTimeout(function () {
-        setToolTipX(x)
+        setToolTipX(x);
       },
         500);
     }
@@ -54,11 +58,13 @@ export default function Components(props) {
 
   const onMouseMove = (e) => {
     const x = e.clientX - myButton.current.getBoundingClientRect().left;
+    const y = e.clientY - myButton.current.getBoundingClientRect().top;
     if (myToolTip.current) {
-      setToolTipX(x)
+      setToolTipX(x);
+      setToolTipY(y);
     } else {
       setTimeout(function () {
-        setToolTipX(x)
+        setToolTipX(x);
       },
         500);
     }
@@ -116,7 +122,7 @@ export default function Components(props) {
                                     ref={myToolTip}
                                     className={classes.tooltip}
                                     style={{
-                                      top: -50,
+                                      top: toolTipY - 100,
                                       left: toolTipX
                                     }}
                                   >
