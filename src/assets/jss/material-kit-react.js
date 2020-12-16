@@ -49,7 +49,7 @@ const container = {
 
 const titleFont = {
   fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
-  lineHeight: "1em",
+  lineHeight: "1cm",
   "@media (min-width: 576px)": {
     fontSize: "30px"
   },
@@ -66,6 +66,7 @@ const titleFont = {
 
 const subtitleFont = {
   fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
+  fontSize: 14,
   "@media (min-width: 576px)": {
     fontSize: "16px"
   },
@@ -81,12 +82,21 @@ const subtitleFont = {
 };
 
 const standardFont = {
-  fontSize: 50,
-  fontWeight: "500",
-  lineHeight: "1.5em",
-  "@media (max-width: 800px)": {
-    fontSize: 30,
+  fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
+  lineHeight: "1cm",
+  fontSize: 30,
+  "@media (min-width: 576px)": {
+    fontSize: "30px"
   },
+  "@media (min-width: 768px)": {
+    fontSize: "30px"
+  },
+  "@media (min-width: 992px)": {
+    fontSize: "42px"
+  },
+  "@media (min-width: 1200px)": {
+    fontSize: "42px"
+  }
 };
 
 const boxShadow = {

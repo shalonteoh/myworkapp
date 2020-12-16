@@ -1,23 +1,16 @@
-import { container, columnCenter } from "assets/jss/material-kit-react.js";
+import { container, standardFont, subtitleFont } from "assets/jss/material-kit-react.js";
 
 const componentsStyle = {
   container: {
     ...container,
-    display: "flex",
-    justifyContent: "center",
   },
-  content: {
-    ...columnCenter,
-    width: "80vh",
-    "@media (max-width: 800px)": {
-      width: "100%",
-    },
+  root: {
+    flexGrow: 1
   },
   subContainer: {
     flex: 1,
   },
   socialIconsContainer: {
-    marginTop: 30,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -43,14 +36,12 @@ const componentsStyle = {
     fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
   },
   title: {
-    lineHeight: "1.5cm",
-    fontSize: 42,
+    ...standardFont,
     fontWeight: "500"
   },
   subtitle: {
-    fontSize: 20,
+    ...subtitleFont,
     fontWeight: "400",
-    lineHeight: "1cm",
   },
   main: {
     background: "#000",
@@ -74,15 +65,19 @@ const componentsStyle = {
     height: 100,
   },
   socialIcons: {
-    width: 32,
-    height: 32,
+    width: 28,
+    height: 28,
+    "@media (min-width: 992px)": {
+      width: 32,
+      height: 32,
+    },
   },
   tooltipImage: {
     width: 100,
     height: "auto"
   },
   marginTop: {
-    marginTop: 20
+    marginTop: 10
   }
 };
 
