@@ -25,7 +25,7 @@ export default function HeaderLinks(props) {
           className={classes.navLink}
           onClick={() => props.fullpageApi.moveTo(2)}
         >
-          All Projects
+          Projects
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>

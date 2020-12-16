@@ -23,7 +23,7 @@ import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
-const anchors = ["home", "profile", "project", "detail", "contact"];
+const anchors = ["home", "project", "skilltool", "aboutme", "contact"];
 
 export default function Components(props) {
   const classes = useStyles();
@@ -113,11 +113,6 @@ I specialized in mobile back-end and responsive website development</div>
                     </div>
                   </Parallax>
                 </div>
-              </div>
-
-
-              <div className="section">
-                <Section2 />
               </div>
 
               <div className="section">

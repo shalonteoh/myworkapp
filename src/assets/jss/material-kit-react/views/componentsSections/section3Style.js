@@ -1,33 +1,71 @@
-import { container, titleFont, subtitleFont } from "assets/jss/material-kit-react.js";
+import { container, titleFont, subtitleFont, standardFont } from "assets/jss/material-kit-react.js";
 
 const section3Style = {
   sections: {
-    padding: "50px 0",
+    padding: "30px 0",
+    "@media (max-width: 800px)": {
+      padding: "0px 30px",
+    },
   },
   container: {
     ...container,
+  },
+  root: {
+    flexGrow: 1,
+  },
+  gridColumn: {
     display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: "column"
   },
   subContainer: {
-    margin: 10,
-    height: "40vh",
+    height: "100%",
     overflow: "hidden",
-    borderRadius: 20
+    borderRadius: 20,
+    "@media (max-width: 800px)": {
+      borderRadius: 10,
+      height: 150,
+    },
+  },
+  columnContainer: {
+    overflow: "hidden",
+    height: "100%",
+  },
+  columnSubContainer: {
+    height: "100%",
+    overflow: "hidden",
+    borderRadius: 20,
+    "@media (max-width: 800px)": {
+      borderRadius: 10,
+    },
   },
   brand: {
     color: "#fff",
     textAlign: "left",
     padding: "20px 30px",
+    "@media (max-width: 800px)": {
+      padding: "15px",
+    },
+  },
+  brandCenter: {
+    color: "#fff",
+    textAlign: "center",
+    padding: "20px 30px",
   },
   title: {
-    ...titleFont,
+    ...standardFont,
     fontWeight: "500",
   },
   subtitle: {
     ...subtitleFont,
-    fontWeight: "300",
+    fontWeight: "400",
+  },
+  projectTitle: {
+    fontSize: 30,
+    lineHeight: "1cm",
+    fontWeight: "500",
+    "@media (max-width: 800px)": {
+      fontSize: 24,
+    },
   },
   icons: {
     ...titleFont,
@@ -42,7 +80,7 @@ const section3Style = {
     height: "auto"
   },
   blue: {
-    background: "#4A90E2",
+    background: "#006D99",
   },
   red: {
     background: "#450200"
@@ -54,7 +92,10 @@ const section3Style = {
     background: "#4A4A4A"
   },
   marginTop: {
-    marginTop: 10
+    marginTop: 5
+  },
+  white: {
+    background: "#fff",
   }
 };
 
