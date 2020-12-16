@@ -129,7 +129,7 @@ I specialized in mobile back-end and responsive website development</div>
 
               <div className="section">
                 <Section5 />
-                <Footer fullpageApi={fullpageApi} windowWidth={windowWidth} />
+                <Footer fullpageApi={fullpageApi} windowWidth={windowWidth} whiteFont />
               </div>
             </ReactFullpage.Wrapper>
           );

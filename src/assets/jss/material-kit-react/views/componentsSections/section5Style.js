@@ -2,26 +2,14 @@ import { container, titleFont } from "assets/jss/material-kit-react.js";
 
 const section5Style = {
   sections: {
-    padding: "70px 0",
+    padding: "30px 0"
   },
   container: {
     ...container,
+    height: "80vh"
   },
-  round: {
-    width: 250,
-    height: 250,
-    borderRadius: 125,
-    overflow: "hidden",
-    "@media (max-width: 800px)": {
-      width: 150,
-      height: 150,
-      borderRadius: 75,
-    },
-  },
-  paper: {
-    padding: 20,
-    margin: 'auto',
-    maxWidth: 500,
+  root: {
+    flexGrow: 1
   },
   center: {
     display: "flex",
@@ -30,8 +18,8 @@ const section5Style = {
   },
   brand: {
     color: "#fff",
-    textAlign: "left",
-    padding: "10px 30px",
+    textAlign: "center",
+    // padding: "10px 30px",
   },
   title: {
     ...titleFont,
@@ -46,16 +34,16 @@ const section5Style = {
     maxWidth: "500px",
   },
   image: {
-    width: 250,
+    width: 200,
     height: "auto",
-    "@media (max-width: 800px)": {
-      width: 150,
-    },
   },
   socialIcons: {
     width: 32,
     height: 32,
   },
+  marginTop: {
+    marginTop: 30
+  }
 };
 
 export default section5Style;

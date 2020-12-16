@@ -40,7 +40,7 @@ export default function Footer(props) {
                 <Button
                   color="transparent"
                   className={classes.block}
-                  onClick={() => props.fullpageApi.moveTo(3)}
+                  onClick={() => props.fullpageApi.moveTo(2)}
                 >
                   Projects
         </Button>
