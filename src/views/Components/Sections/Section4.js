@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/section4Style.js";
-import { Grid, Tab, Tabs } from "@material-ui/core";
+import { Grid, Hidden, Tab, Tabs } from "@material-ui/core";
 import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
@@ -80,7 +80,7 @@ export default function Section4() {
                 </div>
                 <div className={classes.root}>
                     <Grid container spacing={1}>
-                        <Grid item xs={6} md={4}>
+                        <Grid item xs={6} sm={4} md={4}>
                             <div className={classes.brand}>
                                 <div className={classes.projectTitle}>Development</div>
                             </div>
@@ -96,14 +96,16 @@ export default function Section4() {
                                         <Grid item xs={12}>
                                             <div className={classes.projectTitle}>{desc}</div>
                                         </Grid>
-                                        <Grid item xs={12}>
-                                            <div className={classes.subtitle}>{duration}</div>
-                                        </Grid>
+                                        <Hidden only="sm">
+                                            <Grid item xs={12}>
+                                                <div className={classes.subtitle}>{duration}</div>
+                                            </Grid>
+                                        </Hidden>
                                     </Grid>
                                 </div>
                             ))}
                         </Grid>
-                        <Grid item xs={6} md={4}>
+                        <Grid item xs={6} sm={4} md={4}>
                             <div className={classes.brand}>
                                 <div className={classes.projectTitle}>CI/CD</div>
                             </div>
@@ -119,22 +121,26 @@ export default function Section4() {
                                         <Grid item xs={12}>
                                             <div className={classes.projectTitle}>{desc}</div>
                                         </Grid>
-                                        <Grid item xs={12}>
-                                            <div className={classes.subtitle}>{duration}</div>
-                                        </Grid>
+                                        <Hidden only="sm">
+                                            <Grid item xs={12}>
+                                                <div className={classes.subtitle}>{duration}</div>
+                                            </Grid>
+                                        </Hidden>
                                     </Grid>
                                 </div>
                             ))}
                         </Grid>
-                        <Grid item xs={12} md={4}>
+                        <Grid item xs={12} sm={4} md={4}>
                             <div className={classes.brand}>
                                 <div className={classes.projectTitle}>Others</div>
                             </div>
                             <div
                                 className={classNames(classes.brand)}>
-                                <Grid container spacing={1}>
+                                <Grid
+                                    container
+                                    spacing={0}>
                                     {OTHER.map((value, index) => (
-                                        <Grid item key={index} item xs={4} sm={6} md={12}>
+                                        <Grid item key={index} item xs={4} sm={12} md={12}>
                                             <div className={classes.subtitle}>{value}</div>
                                         </Grid>
                                     ))}

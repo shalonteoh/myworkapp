@@ -2,11 +2,10 @@ import { container, standardFont, subtitleFont } from "assets/jss/material-kit-r
 
 const section4Style = {
   sections: {
-    // padding: "30px 0",
   },
   container: {
     ...container,
-    height: "90vh"
+    height: "90vh",
   },
   root: {
     flexGrow: 1
@@ -35,10 +34,14 @@ const section4Style = {
   },
   subContainer: {
     overflow: "hidden",
-    borderRadius: 10,
+    borderRadius: 5,
     background: "#fff",
-    margin: 10,
-    boxShadow: "1px 1px 20px rgba(0,0,0,0.3) inset"
+    margin: 5,
+    boxShadow: "1px 1px 20px rgba(0,0,0,0.3) inset",
+    "@media (min-width: 992px)": {
+      borderRadius: 10,
+      margin: 10,
+    },
   },
   absolute: {
     position: 'absolute',
@@ -46,10 +49,10 @@ const section4Style = {
   brand: {
     color: "#fff",
     textAlign: "left",
-    padding: "20px",
-    "@media (max-width: 800px)": {
-      padding: "10px 15px",
-    },
+    padding: "5px 15px",
+    "@media (min-width: 992px)": {
+      padding: "20px",
+    }
   },
   title: {
     ...standardFont,
@@ -66,13 +69,14 @@ const section4Style = {
     },
   },
   projectTitle: {
-    lineHeight: "1cm",
-    fontSize: 30,
+    ...subtitleFont,
+    // lineHeight: "1cm",
+    // fontSize: 30,
     fontWeight: "700",
-    "@media (max-width: 800px)": {
-      fontSize: 20,
-      lineHeight: "0.5cm"
-    },
+    // "@media (max-width: 800px)": {
+    //   fontSize: 20,
+    //   lineHeight: "0.5cm"
+    // },
   },
   space50: {
     height: "50px",

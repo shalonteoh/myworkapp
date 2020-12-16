@@ -35,7 +35,6 @@ export default function Section3(props) {
                             <Grid container spacing={1}
                                 style={{
                                     height: "80vh"
-                                    // height: props.windowWidth > 992 ? "80vh" : "90vh"
                                 }}
                             >
                                 <Grid item xs={12} sm={6} md={4}>
