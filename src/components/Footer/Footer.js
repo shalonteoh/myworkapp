@@ -49,7 +49,7 @@ export default function Footer(props) {
           </div>
         )}
         <div className={props.windowWidth > 800 ? classes.right : null}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
+          &copy; {1900 + new Date().getYear()} , made with ReactJS{" "}
           <i className="fab fa-react"></i>{" "}by Shalon Teoh
         </div>
       </div>
