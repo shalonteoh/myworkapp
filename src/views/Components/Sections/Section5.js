@@ -25,7 +25,7 @@ export default function Section5(props) {
                                 justify="center"
                                 alignContent="center"
                                 style={{
-                                    height: "70vh",
+                                    height: "60vh",
                                 }}
                             >
                                 <div className={classes.brand}>

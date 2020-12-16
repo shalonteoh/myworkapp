@@ -44,7 +44,6 @@ export default function Components(props) {
         licenseKey={null}
         anchors={anchors}
         scrollingSpeed={500}
-        responsiveWidth={992}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>

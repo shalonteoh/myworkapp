@@ -17,8 +17,9 @@ export default function Section3(props) {
                         container
                         spacing={1}
                         style={{
-                            height: "100vh"
+                            height: "70vh"
                         }}
+                        alignContent="center"
                     >
                         <Grid item xs={12} sm={12} md={3}>
                             <div className={classes.brandCenter}>
@@ -34,7 +35,7 @@ export default function Section3(props) {
                         <Grid item xs={12} sm={12} md={9}>
                             <Grid container spacing={1}
                                 style={{
-                                    height: "80vh"
+                                    height: "70vh"
                                 }}
                             >
                                 <Grid item xs={12} sm={6} md={4}>
