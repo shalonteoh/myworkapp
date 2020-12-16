@@ -1,6 +1,6 @@
-import { container, standardFont, subtitleFont } from "assets/jss/material-kit-react.js";
+import { container, standardFont } from "assets/jss/material-kit-react.js";
 
-const section4Style = {
+const section4aStyle = {
   sections: {
     // padding: "30px 0",
   },
@@ -44,11 +44,13 @@ const section4Style = {
     position: 'absolute',
   },
   brand: {
+    fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
     color: "#fff",
     textAlign: "left",
     padding: "20px",
+    lineHeight: "0.8cm",
     "@media (max-width: 800px)": {
-      padding: "10px 15px",
+      padding: "10px",
     },
   },
   title: {
@@ -59,10 +61,18 @@ const section4Style = {
     color: "#4A90E2"
   },
   subtitle: {
-    ...subtitleFont,
-    fontWeight: "500",
+    fontSize: 24,
+    fontWeight: "400",
     "@media (max-width: 800px)": {
-      fontSize: 16,
+      fontSize: 18,
+    },
+  },
+  durationText: {
+    fontSize: 16,
+    color: "#fff",
+    fontWeight: "400",
+    "@media (max-width: 800px)": {
+      fontSize: 12,
     },
   },
   projectTitle: {
@@ -111,4 +121,4 @@ const section4Style = {
   }
 };
 
-export default section4Style;
+export default section4aStyle;

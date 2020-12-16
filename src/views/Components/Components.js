@@ -14,16 +14,16 @@ import Parallax from "components/Parallax/Parallax.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
-import Section2 from "./Sections/Section2.js";
 import Section3 from "./Sections/Section3.js";
 import Section4 from "./Sections/Section4.js";
+import Section4a from "./Sections/Section4a.js";
 import Section5 from "./Sections/Section5.js";
 import ReactFullpage from '@fullpage/react-fullpage';
 import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
-const anchors = ["home", "project", "skilltool", "aboutme", "contact"];
+const anchors = ["home", "project", "skilltool", "background", "contact"];
 
 export default function Components(props) {
   const classes = useStyles();
@@ -121,6 +121,10 @@ I specialized in mobile back-end and responsive website development</div>
 
               <div className="section">
                 <Section4 />
+              </div>
+
+              <div className="section">
+                <Section4a />
               </div>
 
               <div className="section">

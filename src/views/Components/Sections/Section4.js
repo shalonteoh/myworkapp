@@ -1,74 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/section4Style.js";
-import { Box, Tab, Tabs } from "@material-ui/core";
-import PropTypes from 'prop-types';
+import { Grid, Tab, Tabs } from "@material-ui/core";
 import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <Box p={3}>
-                    {children}
-                </Box>
-            )}
-        </div>
-    );
-}
-
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.any.isRequired,
-    value: PropTypes.any.isRequired,
-};
-
-function a11yProps(index) {
-    return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,
-    };
-}
-
-const SKILLS = [
+const DEV = [
     {
         title: "Back-End",
-        desc: "PHP Laravel"
+        desc: "PHP Laravel",
+        duration: "2+ years"
     },
     {
         title: "Front-End Web",
-        desc: "Javascript ReactJS"
-    },
-    {
-        title: "Front-End Mobile",
-        desc: "Javascript React Native"
+        desc: "Javascript ReactJS",
+        duration: "1+ year"
     },
     {
         title: "Database",
-        desc: "MySQL"
+        desc: "MySQL",
+        duration: "2+ years"
     },
+]
+
+const CICD = [
     {
         title: "Server Hosting",
-        desc: "AWS Beanstalk"
+        desc: "AWS Beanstalk",
+        duration: "2 years"
     },
     {
         title: "Version Control",
-        desc: "Git"
+        desc: "Git",
+        duration: "3 years"
     },
     {
-        title: "VM / Container",
-        desc: "Docker"
+        title: "VM/Container",
+        desc: "Docker",
+        duration: "2 years"
     }
+]
+
+const OTHER = [
+    "VS Code", "MailChimp", "Mandrill", "Bitbucket", "Postman", "Jira", "DeployBot", "Google API"
 ]
 
 const EXP = [
@@ -96,70 +71,77 @@ const EDUCATIONS = [
 ]
 export default function Section4() {
     const classes = useStyles();
-    const [value, setValue] = useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
 
     return (
         <div className={classes.sections}>
             <div className={classes.container}>
-                <div className={classes.tabsContainer}>
-                    <Tabs
-                        centered
-                        value={value}
-                        onChange={handleChange}
-                        classes={{
-                            indicator: classes.indicator,
-                        }}
-                    >
-                        <Tab label="Skills" {...a11yProps(0)} classes={{
-                            root: classes.tab,
-                            selected: classes.selected
-                        }} />
-                        <Tab label="Experience" {...a11yProps(1)} classes={{
-                            root: classes.tab,
-                            selected: classes.selected
-                        }} />
-                        <Tab label="Education" {...a11yProps(2)} classes={{
-                            root: classes.tab,
-                            selected: classes.selected
-                        }} />
-                    </Tabs>
+                <div className={classes.brand}>
+                    <div className={classes.title}>Skills & Tools</div>
                 </div>
-                <div className={classes.tabsContent}>
-                    <TabPanel value={value} index={0}>
-                        <div className={classes.list}>
-                            {SKILLS.map(({ title, desc }, index) => (
-                                <div key={index} className={classes.row}>
-                                    <div className={classes.title}>{title}</div>
-                                    <div className={classes.subtitle}>{desc}</div>
+                <div className={classes.root}>
+                    <Grid container spacing={1}>
+                        <Grid item xs={6} md={4}>
+                            <div className={classes.brand}>
+                                <div className={classes.projectTitle}>Development</div>
+                            </div>
+                            {DEV.map(({ title, desc, duration }, index) => (
+                                <div
+                                    key={index}
+                                    className={classNames(classes.brand, classes.subContainer)}
+                                    style={{ color: "#000" }}>
+                                    <Grid container>
+                                        <Grid item xs={12}>
+                                            <div className={classes.subtitle}>{title}</div>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <div className={classes.projectTitle}>{desc}</div>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <div className={classes.subtitle}>{duration}</div>
+                                        </Grid>
+                                    </Grid>
                                 </div>
                             ))}
-                        </div>
-                    </TabPanel>
-                    <TabPanel value={value} index={1}>
-                        <div className={classes.list}>
-                            {EXP.map(({ title, desc }, index) => (
-                                <div key={index} className={classes.column}>
-                                    <div className={classes.title}>{title}</div>
-                                    <div className={classNames(classes.subtitle, classes.marginTop)}>{desc}</div>
+                        </Grid>
+                        <Grid item xs={6} md={4}>
+                            <div className={classes.brand}>
+                                <div className={classes.projectTitle}>CI/CD</div>
+                            </div>
+                            {CICD.map(({ title, desc, duration }, index) => (
+                                <div
+                                    key={index}
+                                    className={classNames(classes.brand, classes.subContainer)}
+                                    style={{ color: "#000" }}>
+                                    <Grid container>
+                                        <Grid item xs={12}>
+                                            <div className={classes.subtitle}>{title}</div>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <div className={classes.projectTitle}>{desc}</div>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <div className={classes.subtitle}>{duration}</div>
+                                        </Grid>
+                                    </Grid>
                                 </div>
                             ))}
-                        </div>
-                    </TabPanel>
-                    <TabPanel value={value} index={2}>
-                        <div className={classes.list}>
-                            {EDUCATIONS.map(({ title, location, desc }, index) => (
-                                <div key={index} className={classes.column}>
-                                    <div className={classes.title}>{title}</div>
-                                    <div className={classNames(classes.subtitle, classes.marginTop)}>{location}</div>
-                                    <div className={classNames(classes.subtitle, classes.marginTop)}>{desc}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </TabPanel>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <div className={classes.brand}>
+                                <div className={classes.projectTitle}>Others</div>
+                            </div>
+                            <div
+                                className={classNames(classes.brand)}>
+                                <Grid container spacing={1}>
+                                    {OTHER.map((value, index) => (
+                                        <Grid item key={index} item xs={4} sm={6} md={12}>
+                                            <div className={classes.subtitle}>{value}</div>
+                                        </Grid>
+                                    ))}
+                                </Grid>
+                            </div>
+                        </Grid>
+                    </Grid>
                 </div>
             </div>
         </div>
