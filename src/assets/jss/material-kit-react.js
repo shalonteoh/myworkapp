@@ -83,7 +83,7 @@ const subtitleFont = {
 
 const standardFont = {
   fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
-  lineHeight: "1cm",
+  lineHeight: "1.2cm",
   fontSize: 30,
   "@media (min-width: 576px)": {
     fontSize: "30px"

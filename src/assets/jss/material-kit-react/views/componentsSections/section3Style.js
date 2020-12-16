@@ -2,9 +2,9 @@ import { container, titleFont, subtitleFont, standardFont } from "assets/jss/mat
 
 const section3Style = {
   sections: {
-    padding: "30px 0",
-    "@media (max-width: 800px)": {
-      padding: "0px 30px",
+    padding: "0px 30px",
+    "@media (min-width: 992px)": {
+      padding: "70px 0px"
     },
   },
   container: {
@@ -20,10 +20,9 @@ const section3Style = {
   subContainer: {
     height: "100%",
     overflow: "hidden",
-    borderRadius: 20,
-    "@media (max-width: 800px)": {
-      borderRadius: 10,
-      height: 150,
+    borderRadius: 10,
+    "@media (min-width: 992px)": {
+      borderRadius: 20
     },
   },
   columnContainer: {
@@ -33,9 +32,9 @@ const section3Style = {
   columnSubContainer: {
     height: "100%",
     overflow: "hidden",
-    borderRadius: 20,
-    "@media (max-width: 800px)": {
-      borderRadius: 10,
+    borderRadius: 10,
+    "@media (min-width: 992px)": {
+      borderRadius: 20
     },
   },
   brand: {
@@ -49,7 +48,7 @@ const section3Style = {
   brandCenter: {
     color: "#fff",
     textAlign: "center",
-    padding: "20px 30px",
+    padding: "20px 30px 0px 30px",
   },
   title: {
     ...standardFont,
@@ -90,6 +89,9 @@ const section3Style = {
   },
   grey: {
     background: "#4A4A4A"
+  },
+  orange: {
+    background: "#D85B1E"
   },
   marginTop: {
     marginTop: 5
