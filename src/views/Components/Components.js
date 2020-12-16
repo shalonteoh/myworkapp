@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 // core components
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
 import Button from "components/CustomButtons/Button.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -68,7 +67,7 @@ export default function Components(props) {
                         <Grid item xs={12} md={12}>
                           <div className={classes.brand}>
                             <img className={classes.image} src={require("assets/img/bg2.png")} alt="bg2" />
-                            <div className={classNames(classes.subtitle, classes.marginTop)}>Hi, I’m Shalon 🤘</div>
+                            <div className={classNames(classes.subtitle, classes.marginTop)}>Hi, I’m Shalon <span role="img" aria-label="rock">🤘</span></div>
                           </div>
                         </Grid>
                         <Grid item xs={12} md={12}>

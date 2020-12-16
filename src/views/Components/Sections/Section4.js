@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/componentsSections/section4Style.js";
-import { Grid, Hidden, Tab, Tabs } from "@material-ui/core";
+import { Grid, Hidden } from "@material-ui/core";
 import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
@@ -46,29 +46,6 @@ const OTHER = [
     "VS Code", "MailChimp", "Mandrill", "Bitbucket", "Postman", "Jira", "DeployBot", "Google API"
 ]
 
-const EXP = [
-    {
-        title: "Full Stack Developer at EasyWork Asia, Penang",
-        desc: "Oct 17 - July 20"
-    },
-    {
-        title: "Business Analyst Internship at Nexstream, Petaling Jaya",
-        desc: "Sept 16 - Dec 16"
-    }
-]
-
-const EDUCATIONS = [
-    {
-        title: "Bachelor’s Degree for Information System Engineering (Hons)",
-        location: "Universiti Tunku Abdul Rahman (UTAR), Kampar",
-        desc: "Oct 13 - Sept 17"
-    },
-    {
-        title: "Foundation in Information Technology",
-        location: "Universiti Tenaga Nasional (UNITEN), Putrajaya",
-        desc: "May 12 - May 13"
-    }
-]
 export default function Section4() {
     const classes = useStyles();
 
@@ -139,9 +116,9 @@ export default function Section4() {
                                 <Grid
                                     container
                                     spacing={0}>
-                                    {OTHER.map((value, index) => (
+                                    {OTHER.map((item, index) => (
                                         <Grid item key={index} item xs={4} sm={12} md={12}>
-                                            <div className={classes.subtitle}>{value}</div>
+                                            <div className={classes.subtitle}>{item}</div>
                                         </Grid>
                                     ))}
                                 </Grid>
