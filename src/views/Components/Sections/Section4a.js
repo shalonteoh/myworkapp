@@ -42,7 +42,7 @@ export default function Section4a() {
                 </div>
                 <div className={classes.root}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                             <div className={classNames(classes.brand, classes.marginTop)}>
                                 <div className={classes.projectTitle}>Working Experience</div>
                             </div>
@@ -65,7 +65,7 @@ export default function Section4a() {
                                 </div>
                             ))}
                         </Grid>
-                        <Grid item xs={12} md={6}>
+                        <Grid item xs={12} sm={6} md={6}>
                             <div className={classNames(classes.brand, classes.marginTop)}>
                                 <div className={classes.projectTitle}>Education</div>
                             </div>

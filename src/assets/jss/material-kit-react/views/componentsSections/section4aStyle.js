@@ -1,4 +1,4 @@
-import { container, standardFont } from "assets/jss/material-kit-react.js";
+import { container, standardFont, subtitleFont } from "assets/jss/material-kit-react.js";
 
 const section4aStyle = {
   sections: {
@@ -47,10 +47,9 @@ const section4aStyle = {
     fontFamily: '"Helvetica Neue", "Helvetica", "Arial", sans-serif',
     color: "#fff",
     textAlign: "left",
-    padding: "20px",
-    lineHeight: "0.8cm",
-    "@media (max-width: 800px)": {
-      padding: "10px",
+    padding: "5px",
+    "@media (min-width: 992px)": {
+      padding: "20px",
     },
   },
   title: {
@@ -61,10 +60,11 @@ const section4aStyle = {
     color: "#4A90E2"
   },
   subtitle: {
-    fontSize: 24,
+    ...subtitleFont,
+    //fontSize: 24,
     fontWeight: "400",
     "@media (max-width: 800px)": {
-      fontSize: 18,
+      //fontSize: 18,
     },
   },
   durationText: {
@@ -76,12 +76,13 @@ const section4aStyle = {
     },
   },
   projectTitle: {
-    lineHeight: "1cm",
-    fontSize: 30,
+    ...subtitleFont,
+    //lineHeight: "1cm",
+    //fontSize: 30,
     fontWeight: "700",
     "@media (max-width: 800px)": {
-      fontSize: 20,
-      lineHeight: "0.5cm"
+      // fontSize: 20,
+      // lineHeight: "0.5cm"
     },
   },
   space50: {
@@ -117,7 +118,10 @@ const section4aStyle = {
     background: "#4A4A4A"
   },
   marginTop: {
-    marginTop: 10
+    marginTop: 5,
+    "@media (min-width: 992px)": {
+      marginTop: 10
+    },
   }
 };
 
