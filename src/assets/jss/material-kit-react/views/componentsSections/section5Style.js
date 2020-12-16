@@ -1,12 +1,11 @@
-import { container, titleFont } from "assets/jss/material-kit-react.js";
+import { container, titleFont, subtitleFont } from "assets/jss/material-kit-react.js";
 
 const section5Style = {
   sections: {
-    padding: "30px 0"
+    paddingTop: "30px",
   },
   container: {
     ...container,
-    height: "80vh"
   },
   root: {
     flexGrow: 1
@@ -19,7 +18,6 @@ const section5Style = {
   brand: {
     color: "#fff",
     textAlign: "center",
-    // padding: "10px 30px",
   },
   title: {
     ...titleFont,
@@ -29,20 +27,32 @@ const section5Style = {
     color: "#4A90E2"
   },
   subtitle: {
-    fontSize: "24px",
+    ...subtitleFont,
+    //fontSize: "24px",
     fontWeight: "400",
-    maxWidth: "500px",
+    //maxWidth: "500px",
   },
   image: {
-    width: 200,
+    width: 100,
     height: "auto",
+    "@media (min-width: 992px)": {
+      width: 200,
+    }
   },
   socialIcons: {
     width: 32,
     height: 32,
   },
   marginTop: {
-    marginTop: 30
+    marginTop: 10,
+    "@media (min-width: 992px)": {
+      marginTop: 30,
+    }
+  },
+  bottom: {
+    display: "absolute",
+    bottom: 0,
+    left: 0
   }
 };
 

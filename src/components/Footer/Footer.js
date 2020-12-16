@@ -33,22 +33,13 @@ export default function Footer(props) {
                   className={classes.block}
                   onClick={() => props.fullpageApi.moveTo(1)}
                 >
-                  Shalon Teoh
-        </Button>
-              </ListItem>
-              <ListItem className={classes.inlineBlock}>
-                <Button
-                  color="transparent"
-                  className={classes.block}
-                  onClick={() => props.fullpageApi.moveTo(2)}
-                >
-                  Projects
-        </Button>
+                  Go to top{" "}<i className="fas fa-arrow-up"></i>
+                </Button>
               </ListItem>
             </List>
           </div>
         )}
-        <div className={props.windowWidth > 800 ? classes.right : null}>
+        <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made with ReactJS{" "}
           <i className="fab fa-react"></i>{" "}by Shalon Teoh
         </div>
